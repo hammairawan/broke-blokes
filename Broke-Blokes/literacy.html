@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Money Jargon | Broke Blokes</title>
+<meta content="Search plain-language financial definitions." name="description"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="images/favicon.png" rel="icon"/>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap nav-bar">
+<button aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation" class="menu-btn">☰</button><a class="brand" href="index.html"><img alt="Broke Blokes logo" src="images/favicon.png"/> Broke Blokes</a>
+<nav aria-label="Main">
+<ul class="nav-list" id="menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="interactive.html">Broke-O-Meter</a></li>
+<li><a href="explore.html">Stay Un-Broke</a></li>
+<li><a href="details.html">Get Paid</a></li>
+<li><a aria-current="page" class="active" href="literacy.html">Money Jargon</a></li>
+<li><a href="quiz.html">Quiz</a></li>
+<li><a href="contact.html">Contact</a></li></ul>
+</nav>
+</div>
+</header>
+<main id="main">
+<!-- Learn: searchable table of money terms -->
+<section class="page-head">
+<div class="wrap">
+<h1>Money Jargon</h1>
+<p class="lead">Money words explained in plain language. Search a term or filter by topic.</p>
+<img alt="Open book with money symbol" class="topic-image" src="images/literacy.png"/></div>
+</section>
+<section class="section no-top">
+<div class="wrap">
+<div class="row-2 mb-16">
+<div class="field"><label for="search">Search</label><input id="search" placeholder='Try "interest" or "budget"' type="search"/></div>
+<div class="field">
+<label for="category">Topic</label>
+<select id="category">
+<option value="all">All topics</option>
+<option value="Basics">Basics</option>
+<option value="Saving">Saving</option>
+<option value="Borrowing">Borrowing</option>
+<option value="Earning">Earning</option>
+</select>
+</div>
+</div>
+<p aria-live="polite" class="muted small" id="count"></p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th scope="col">Term</th>
+<th scope="col">Topic</th>
+<th scope="col">What it means</th>
+</tr>
+</thead>
+<tbody id="glossBody"></tbody>
+</table>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<p>Broke Blokes © 2026 |<strong> Project by Hammair &amp; Ali Zuberi </strong>| Introduction to ICT | <a href="contact.html">Contact us</a></p>
+<p>General education only, not professional financial advice.</p></div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

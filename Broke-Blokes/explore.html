@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Stay Un-Broke | Broke Blokes</title>
+<meta content="Filter saving tips and split group bills fairly." name="description"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="images/favicon.png" rel="icon"/>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap nav-bar">
+<button aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation" class="menu-btn">☰</button><a class="brand" href="index.html"><img alt="Broke Blokes logo" src="images/favicon.png"/> Broke Blokes</a>
+<nav aria-label="Main">
+<ul class="nav-list" id="menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="interactive.html">Broke-O-Meter</a></li>
+<li><a aria-current="page" class="active" href="explore.html">Stay Un-Broke</a></li>
+<li><a href="details.html">Get Paid</a></li>
+<li><a href="literacy.html">Money Jargon</a></li>
+<li><a href="quiz.html">Quiz</a></li>
+<li><a href="contact.html">Contact</a></li></ul>
+</nav>
+</div>
+</header>
+<main id="main">
+<!-- Save: tips, filterable by topic -->
+<section class="page-head">
+<div class="wrap">
+<h1>Stay Un-Broke</h1>
+<p class="lead">Small changes that keep money in your pocket. Pick a topic, then use the bill splitter when
+            you eat out with friends.</p>
+<img alt="Savings jar with coins" class="topic-image" src="images/saving.png"/></div>
+</section>
+<section class="section no-top">
+<div class="wrap">
+<div aria-label="Filter tips by topic" class="filters" role="group">
+<button aria-pressed="true" class="chip" data-filter="all">All</button>
+<button aria-pressed="false" class="chip" data-filter="habits">Money habits</button>
+<button aria-pressed="false" class="chip" data-filter="food">Food</button>
+<button aria-pressed="false" class="chip" data-filter="transport">Transport</button>
+<button aria-pressed="false" class="chip" data-filter="study">Study costs</button>
+</div>
+<div class="grid grid-3">
+<article class="card tip" data-cat="habits">
+<h3>Track every expense for two weeks</h3>
+<p>Write down each purchase. Most people find a few small, regular costs that add up to more than they
+                expected.</p>
+</article>
+<article class="card tip" data-cat="habits">
+<h3>Pay yourself first</h3>
+<p>Move a fixed amount to savings on the day money arrives, then budget with what is left.</p>
+</article>
+<article class="card tip" data-cat="habits">
+<h3>Use a waiting rule</h3>
+<p>For any unplanned purchase, wait 24 hours. If you still want it and it fits your budget, buy it.</p>
+</article>
+<article class="card tip" data-cat="habits">
+<h3>Audit subscriptions monthly</h3>
+<p>List every recurring charge. Cancel what you did not use this month, and share plans only where the
+                provider allows it.</p>
+</article>
+<article class="card tip" data-cat="food">
+<h3>Cook in batches</h3>
+<p>Cooking larger portions and storing them costs less per meal than buying meals out or ordering in.</p>
+</article>
+<article class="card tip" data-cat="food">
+<h3>Plan a weekly shopping list</h3>
+<p>Shop with a list and a set amount. Planning meals reduces food waste and impulse purchases.</p>
+</article>
+<article class="card tip" data-cat="food">
+<h3>Carry water and a snack</h3>
+<p>Buying drinks and snacks between classes is a common hidden cost. A refillable bottle removes it.</p>
+</article>
+<article class="card tip" data-cat="transport">
+<h3>Share rides and use passes</h3>
+<p>Carpool with classmates where it is safe and legal, and check whether student passes cut your fares.
+              </p>
+</article>
+<article class="card tip" data-cat="transport">
+<h3>Walk or cycle short trips</h3>
+<p>Short journeys by foot or bike cost nothing and are often as fast as waiting for transport.</p>
+</article>
+<article class="card tip" data-cat="study">
+<h3>Borrow or buy used textbooks</h3>
+<p>Check the library, senior students and second-hand listings before buying new. Confirm the edition
+                first.</p>
+</article>
+<article class="card tip" data-cat="study">
+<h3>Ask about student discounts</h3>
+<p>Software, devices and services often have education pricing. Keep your student card or email ready.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="section" id="splitter">
+<div class="wrap">
+<h2>Group bill splitter</h2>
+<p class="lead">Split a meal or trip fairly. Choose an equal split, or split by what each person ordered.</p>
+<div class="grid grid-2">
+<div class="card">
+<div class="row-2">
+<div class="field"><label for="bill">Bill total (before tip)</label><input id="bill" min="0" step="0.01" type="number" value="4000"/></div>
+<div class="field"><label for="tip">Tip or service %</label><input id="tip" max="100" min="0" step="1" type="number" value="10"/></div>
+</div>
+<div class="row-2">
+<div class="field"><label for="people">Number of people (2 to 12)</label><input id="people" max="12" min="2" step="1" type="number" value="4"/></div>
+<div class="field">
+<label for="mode">How to split</label>
+<select id="mode">
+<option value="equal">Equally</option>
+<option value="items">By what each person ordered</option>
+</select>
+</div>
+</div>
+<p class="hint mb-8">Names are optional. In "by what each person ordered" mode, enter
+                each person's items. Anything left over on the bill is shared equally.</p>
+<div class="split-people" data-mode="equal" id="rows"></div>
+</div>
+<div aria-live="polite" class="card">
+<h3>Who pays what</h3>
+<div id="splitOut"></div>
+<p class="hint">Amounts use whatever currency you entered.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<p>Broke Blokes © 2026 |<strong> Project by Hammair &amp; Ali Zuberi </strong>| Introduction to ICT | <a href="contact.html">Contact us</a></p>
+<p>General education only, not professional financial advice.</p></div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
